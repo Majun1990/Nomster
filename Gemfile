@@ -70,4 +70,4 @@ source 'https://rails-assets.org' do
 end
 
 gem 'pagy'
-
+gem 'font-awesome-rails'
