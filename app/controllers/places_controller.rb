@@ -1,4 +1,5 @@
 class PlacesController < ApplicationController
+  before_action :authenticate_user!, only: [:new, :create]
   def index
     @pagy, @places = pagy(Place.all, items: 10)
     
