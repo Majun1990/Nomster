@@ -2,8 +2,8 @@ class PhotosController < ApplicationController
 before_action :authenticate_user!
 
   def create
-    @photo = Photo.find(params[:place_id])
-    @photo.create(photo_params.merge(user: current_user))
+    @place = Place.find(params[:place_id])
+    @place.photos.create(photo_params)
 
   end
 
