@@ -99,18 +99,6 @@
 <div class= "clear"></div>
 
 </div>
-<div class="clear"></div>
-
-<div class="row">
-  <% @place.photos.each do |photo| %>
-  <div>
-
-    <%= image_tag photo.picture.url %>
-    <%= photo.caption %>
-
-</div>
-<% end -%>
-</div>
 
 <div class="col-10 offset-1">
 <h1 class="float-left">Photos</h1>
@@ -133,7 +121,7 @@
       </div>
       <div class="modal-body">
         <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
-        <%= f.input :picture %>
+        <%= f.file_field :picture %>
         <%= f.input :caption %>
       </div>
       <div class="modal-footer">
@@ -143,4 +131,14 @@
        <% end -%>
     </div>
   </div>
+</div>
+
+<div class="clear"></div>
+<div class="row">
+  <% @place.photos.each do |photo| %>
+  <div>
+    <%= image_tag @photo.picture.url %>
+    <%= photo.caption %>
+</div>
+<% end -%>
 </div>
