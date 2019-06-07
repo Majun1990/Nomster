@@ -27,7 +27,7 @@
 
     <div id="map"></div>
 
-  <% end -%>
+  <% end %>
 
 <br>
 
@@ -62,7 +62,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <%= f.submit "Add a Comment", class: 'btn btnprimary' %>
+        <button><%= f.submit "Add a Comment", class: 'btn btn-primary' %></button>
         </div>
         <% end %>
     </div>
@@ -119,7 +119,7 @@
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Add A Photo</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-        </button>
+      </button>
       </div>
       <div class="modal-body">
        <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
@@ -127,7 +127,7 @@
           <%= f.file_field :picture %>      
       </div>
       <div class="modal-footer">
-        <%= f.submit "Add a photo", class: 'btn btn-secondary' %>
+        <button><%= f.submit "Add a photo", class: 'btn btn-secondary' %></button>
       </div>
       <% end %>
     </div>
