@@ -62,7 +62,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button><%= f.submit "Add a Comment", class: 'btn btn-primary' %></button>
+        <%= f.submit "Add a Comment", class: 'btn btn-primary' %>
         </div>
         <% end %>
     </div>
@@ -127,7 +127,8 @@
           <%= f.file_field :picture %>      
       </div>
       <div class="modal-footer">
-        <button><%= f.submit "Add a photo", class: 'btn btn-secondary' %></button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <%= f.submit "Add a photo", class: 'btn btn-secondary' %>
       </div>
       <% end %>
     </div>
